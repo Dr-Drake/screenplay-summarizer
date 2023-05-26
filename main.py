@@ -1,6 +1,8 @@
-from io import BytesIO, StringIO
-from fastapi import FastAPI, HTTPException, UploadFile
-from pdfminer.high_level import extract_text_to_fp, extract_text
+from io import BytesIO
+from fastapi import FastAPI, HTTPException, UploadFile, Request
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+from pdfminer.high_level import extract_text
 from dotenv import load_dotenv, find_dotenv
 
 from services.llm_summarize import llm_summarize
@@ -14,10 +16,16 @@ max_size = 150000
 # Create app server
 app = FastAPI()
 
+# Mount static directory
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# Template Directory
+templates = Jinja2Templates(directory="templates")
+
 # Routes
 @app.get("/")
-def read_root():
-    return { "Hello": "World" }
+def read_root(req: Request):
+    return templates.TemplateResponse("base.html", { "request": req })
 
 
 @app.post("/api/summarize")

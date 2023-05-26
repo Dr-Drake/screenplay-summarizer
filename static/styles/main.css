@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.main-sec{
+    max-height: 100vh;
+    min-height: 100vh;
+}
+
+.summary-container{
+    height: 300px;
+}
