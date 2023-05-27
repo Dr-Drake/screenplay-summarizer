@@ -2,5 +2,8 @@ fastapi
 uvicorn[standard]
 langchain
 pdfminer.six 
-dotenv
+python-dotenv  
 openai
+openapi-schema-pydantic
+python-multipart 
+Jinja2                  
