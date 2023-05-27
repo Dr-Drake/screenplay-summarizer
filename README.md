@@ -1,4 +1,4 @@
-# PDF Convert
+# Screenplay Summarizer
 This is a simple web application that summarizes screenplays.
 It works using [LangChain](https://python.langchain.com/en/latest/index.html), and the [OpenAI](https://openai.com/) large language model.
 
