@@ -19,7 +19,7 @@ python install -r requirements.txt
 To run the project in dev mode use  following command:
 
 ```bash
-uvicorn main:app --watch
+uvicorn main:app --reload
 ```
 
 Then go to http://localhost:8000
