@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+langchain
+pdfminer.six 
+dotenv
+openai
