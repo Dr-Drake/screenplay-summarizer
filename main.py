@@ -7,6 +7,12 @@ from dotenv import load_dotenv, find_dotenv
 
 from services.llm_summarize import llm_summarize
 
+# Useful links:
+# https://medium.com/muthoni-wanyoike/implementing-text-summarization-using-openais-gpt-3-api-dcd6be4f6933
+# https://towardsdatascience.com/make-a-text-summarizer-with-gpt-3-f0917a07189e
+# https://towardsdatascience.com/leverage-llms-like-gpt-to-analyze-your-documents-or-transcripts-c640a266ad52
+# https://towardsdatascience.com/summarize-podcast-transcripts-and-long-texts-better-with-nlp-and-ai-e04c89d3b2cb
+
 # Load the ENV variables
 load_dotenv(find_dotenv())
 
